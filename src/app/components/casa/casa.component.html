@@ -1,0 +1,81 @@
+<p>
+  casa works!
+</p>
+<section id="basic-form-layouts">
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title" id="basic-layout-colored-form-control">Adicionar casa</h4>
+      <p class="mb-0">Adicione los campos requeridos para su debido registro.
+    </div>
+    <div class="card-content">
+      <div class="px-3">
+
+        <form novalidate  #casaForm="ngForm" (ngSubmit)="registrarCasa(casaForm)">
+          <div class="form-body">
+            <h4 class="form-section"><i class="ft-box"></i> Datos Requeridos</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Nombre Casa</label>
+                  <input ngModel name="nombreCasa" type="text" id="userinput1" class="form-control border-primary" required />
+                </div>
+              </div>              
+            </div>
+            <div class="row" >
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Tipo de Casa</label>
+                  <input ngModel name="tipoCasa" type="text" id="userinput1" class="form-control border-primary" required/>
+                </div>
+              </div>              
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput3">  Detalles</label>
+                  <input ngModel name="detalles" type="text" id="userinput3" class="form-control border-primary" required/>
+                </div>
+              </div>              
+            </div>
+          </div>
+        
+          <div class="form-actions right">
+            <button type="button" class="btn btn-raised btn-warning mr-1">
+              <i class="ft-x"></i> Cancelar
+            </button>
+            <button type="submit" class="btn btn-raised btn-primary">
+              <i class="fa fa-check"></i> Registrar
+            </button>
+          </div>
+          
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Tabla de datos-->
+<div class="container">
+  <h3>Lista Casas</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre de Casa</th>
+        <th scope="col">Tipo de Casa</th>
+        <th scope="col">Detalles</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listaCasa">
+        <td>{{item.nombreCasa}}</td>
+        <td>{{item.tipoCasa}}</td>
+        <td>{{item.detalles}}</td>
+        <td><button class="btn btn-primary" (click)="getAllCasa(item)">Trear Casa</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>

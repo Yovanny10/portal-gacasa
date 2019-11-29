@@ -1,0 +1,84 @@
+<p>
+  cocinada works!
+</p>
+<section id="basic-form-layouts">
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title" id="basic-layout-colored-form-control">Adicionar Preparacion de Alimentos</h4>
+      <p class="mb-0">Adicione los campos requeridos para su debido registro.
+    </div>
+    <div class="card-content">
+      <div class="px-3">
+
+        <form novalidate  #cocinadaForm="ngForm" (ngSubmit)="registrarCocinada(cocinadaForm)">
+          <div class="form-body">
+            <h4 class="form-section"><i class="ft-box"></i> Datos Requeridos</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Chef Responzable</label>
+                  <input ngModel name="chef"  type="text" id="userinput1" class="form-control border-primary" required />
+                </div>
+              </div>              
+            </div>
+            <div class="row" >
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Fecha Inicio</label>
+                  <div class="input-group">
+                    <input ngModel class="form-control border-primary" type="date"  name="fechaInicio"  ngbDatepicker
+                      #d2="ngbDatepicker">
+                    <div class="input-group-append">
+                      <div class="input-group-text" (click)="d2.toggle()">
+                        <i class="fa fa-calendar" style="cursor: pointer;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput3">Fecha Final</label>
+                  <div class="input-group">
+                    <input ngModel class="form-control border-primary" type="date"  name="fechaFinal"  ngbDatepicker
+                      #d3="ngbDatepicker">
+                    <div class="input-group-append">
+                      <div class="input-group-text" (click)="d3.toggle()">
+                        <i class="fa fa-calendar" style="cursor: pointer;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Detalles</label>
+                  <input ngModel name="detalles"  type="text" id="userinput1" class="form-control border-primary" required />
+                </div>
+              </div>              
+            </div>
+          </div>
+
+          <div class="form-actions right">
+            <button type="button" class="btn btn-raised btn-warning mr-1">
+              <i class="ft-x"></i> Cancelar
+            </button>
+            <button type="submit" class="btn btn-raised btn-primary">
+              <i class="fa fa-check"></i> Registrar
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+

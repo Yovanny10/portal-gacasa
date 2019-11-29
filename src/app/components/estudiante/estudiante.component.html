@@ -1,0 +1,73 @@
+<p>
+  estudiante works!
+</p>
+<section id="basic-form-layouts">
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title" id="basic-layout-colored-form-control">Adicionar Estudiante</h4>
+      <p class="mb-0">Adicione los campos requeridos para su debido registro.
+    </div>
+    <div class="card-content">
+      <div class="px-3">
+
+        <form novalidate  #estudianteForm="ngForm" (ngSubmit)="registrarEstudiante(estudianteForm)">
+          <div class="form-body">
+            <h4 class="form-section"><i class="ft-box"></i> Datos de Estudiante</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Nombre</label>
+                  <input ngModel name="nombre" type="text" id="userinput1" class="form-control border-primary" required/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput2">Apellido</label>
+                  <input ngModel name="apellido" type="text" id="userinput2" class="form-control border-primary" required/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput3">  Telefono</label>
+                  <input ngModel name="telefono" type="Number" id="userinput3" class="form-control border-primary" required/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput4">Casa</label>
+                  <input ngModel name="casa" type="text" id="userinput4" class="form-control border-primary" required/>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="form-section"><i class="ft-mail"></i> Datos para Iniciar Sesion</h4>
+
+            <div class="form-group">
+              <label for="userinput5">Correo</label>
+              <input ngModel name="email" class="form-control border-primary" type="email" id="userinput5" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="userinput6">Contraseña</label>
+              <input ngModel name="password" class="form-control border-primary" type="password" id="userinput6" required/>
+            </div>  
+          </div>
+
+          <div class="form-actions right">
+            <button type="button" class="btn btn-raised btn-warning mr-1">
+              <i class="ft-x"></i> Cancelar
+            </button>
+            <button type="submit" class="btn btn-raised btn-primary">
+              <i class="fa fa-check"></i> Registrar
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>

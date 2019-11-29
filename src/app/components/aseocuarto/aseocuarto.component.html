@@ -1,0 +1,59 @@
+<p>
+  aseocuarto works!
+</p>
+<section id="basic-form-layouts">
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title" id="basic-layout-colored-form-control">Adicionar Aseo de la Cuarto</h4>
+      <p class="mb-0">Adicione los campos requeridos para su debido registro.
+    </div>
+    <div class="card-content">
+      <div class="px-3">
+
+        <form novalidate  #aseoCuartoForm="ngForm" (ngSubmit)="registrarAseoCuarto(aseoCuartoForm)">
+          <div class="form-body">
+            <h4 class="form-section"><i class="ft-box"></i> Datos Requeridos</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Estudiante Responzable</label>
+                  <input ngModel name="estudianteCu" type="text" id="userinput1" class="form-control border-primary" required />
+                </div>
+              </div>              
+            </div>
+            <div class="row" >
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput1">Día a la Semana</label>
+                  <input ngModel name="dia" type="text" id="userinput1" class="form-control border-primary" required />
+                </div>
+              </div>              
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userinput3">Numero Cuarto</label>
+                  <input ngModel name="numCuarto" type="Number" id="userinput3" class="form-control border-primary" required />
+                </div>
+              </div>              
+            </div>
+          </div>
+
+          <div class="form-actions right">
+            <button type="button" class="btn btn-raised btn-warning mr-1">
+              <i class="ft-x"></i> Cancelar
+            </button>
+            <button type="submit" class="btn btn-raised btn-primary">
+              <i class="fa fa-check"></i> Registrar
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+

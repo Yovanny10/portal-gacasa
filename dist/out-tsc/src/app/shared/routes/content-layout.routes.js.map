@@ -1,0 +1,1 @@
+{"version":3,"file":"content-layout.routes.js","sourceRoot":"","sources":["../../../../../../src/app/shared/routes/content-layout.routes.ts"],"names":[],"mappings":"AAEA,uGAAuG;AAEvG,MAAM,CAAC,MAAM,cAAc,GAAW;IAClC;QACI,IAAI,EAAE,gBAAgB;QACtB,YAAY,EAAE,GAAG,EAAE,CAAC,MAAM,CAAC,sDAAsD,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,kBAAkB,CAAC;KACnH;CACN,CAAC"}
